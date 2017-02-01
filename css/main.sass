@@ -1,0 +1,105 @@
+@import normalize
+@import skeleton
+
+.content
+  max-width: 640px
+  margin: 0px auto
+
+article
+  text-align: center
+  padding: 100px 0px 0px
+
+  h1
+    color: #ccc
+
+img
+  width: 100%
+
+.birdbox
+  height: 600px
+  position: relative
+  background:
+    image: url(../images/bird-bg.jpg)
+    size: auto 600px
+    position: top center
+    attachment: fixed
+  overflow: hidden
+
+  .logo
+    height: 100px
+    width: 100%
+    background:
+      image: url(../images/black-bird-logo.svg)
+      repeat: no-repeat
+      position: top center
+    position: absolute
+    top: 50%
+    margin-top: -50px
+
+  .frontbird
+    width: 960px
+    height: 733px
+    background:
+      image: url(../images/fore-bird.png)
+      repeat: no-repeat
+      position: right bottom
+    position: absolute
+    left: 50%
+    margin-left: -480px
+    top: 380px
+
+  .backbird
+    width: 960px
+    height: 298px
+    background:
+      image: url(../images/back-bird.png)
+      position: top left
+      repeat: no-repeat
+    position: absolute
+    left: 50%
+    margin-left: -480px
+
+.img-row
+  margin-bottom: 20px
+
+figure
+  margin: 0px
+  opacity: 0
+  transform: translateX(20px)
+  transition: all 0.4s ease-in-out
+  position: relative
+  font-size: 1em
+  overflow: hidden
+  &.landing
+    opacity: 1
+    transform: translateX(0px)
+  &:hover
+    figcaption
+      left: 0px
+    img
+      transform: scale(1.1)
+
+  figcaption
+    position: absolute
+    bottom: 15px
+    left: -100%
+    padding: 2px 3px
+    background: rgba(0 , 0, 0, 0.7)
+    color: #fff
+    transition: all .3s ease-in-out
+
+  img
+    transform: scale(1)
+    display: block
+    transition: all .3s ease-in-out
+
+.large-window
+  height: 640px
+  border-radius: 50%
+  background:
+    image: url(../images/model2.jpg)
+    attachment: fixed
+    repeat: repeat-y
+    position: top center
+  margin-top: 100px
+  margin-bottom: 100px
